@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins&display=swap');
+
+:root {
+    /* colors */
+    --main: #4d479d;
+    --second: #7a86f2;
+    --ascent: #5c92ef;
+    --bg: #F1F2E9;
+    --error: #ff6060;
+    --black: #000000;
+    --white: #ffffff;
+    --trans-white: rgba(255, 255, 255, .5);
+
+    --orange: #F6BD66;
+    --green: #89c094;
+    --blue: #5d94b3;
+    --yellow: #F6D066;
+    --red: #FF9F9F;
+    --purple: #B99AE8;
+
+    /*additional*. */
+    --box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    /* font size */
+    --hero: 6.25rem;
+    --header: 2.25rem;
+    --small-header: 1.5rem;
+    --label: 1.875rem;
+    --small-label: 1.25rem;
+    --content: 1.125rem;
+    --small-content: 1rem;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+
+    overflow-x: hidden;
+}
+
+section {
+    margin: 0 auto;
+    width: 50%;
+    min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hi {
+    position: fixed;
+    height: 100vh;
+    background: var(--bg);
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.me {
+    width: 300px;
+    border-radius: 50%;
+    margin: 20px 0;
+
+}
+
+.person-card {
+    padding: 80px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-title {
+    font-weight: var(--bold);
+    font-size: var(--header);
+}
+
+.task-header,
+.small-header {
+    font-weight: var(--bold);
+    font-size: var(--small-header);
+
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-role {
+    color: var(--main);
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sub-sub-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-title {
+    font-weight: var(--light);
+}
+
+.value {
+    width: 70px;
+    height: 25px;
+}
+
+.progress-bar {
+    height: 25px;
+    width: 100%;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.progress-bar span {
+    height: 100%;
+    display: block;
+}
+
+/*progress bar color*/
+/*level*/
+.level {
+    border: 1px solid var(--main);
+}
+
+.level span {
+    background: var(--main);
+}
+
+/*pro skill color*/
+.pro-skill {
+    border: 1px solid var(--second);
+}
+
+.pro-skill span {
+    background: var(--second);
+}
+
+/*soc skill color*/
+.soc-skill {
+    border: 1px solid var(--ascent);
+}
+
+.soc-skill span {
+    background: var(--ascent);
+}
+
+/*Hoang Linh*/
+.hLinh.level span {
+    width: 19%;
+    animation: width-animation-level 2s;
+    animation-delay: 2.5s;
+}
+
+.hLinh.pro-skill span {
+    width: 30%;
+    animation: width-animation-code 2s;
+    animation-delay: 2.5s;
+
+}
+
+.hLinh.soc-skill span {
+    width: 10%;
+    animation: width-animation-social 2s;
+    animation-delay: 2.5s;
+}
+
+.social-linked {
+    color: var(--main);
+    font-size: var(--small-header);
+
+}
+
+.value {
+    font-size: var(--small-header);
+    font-weight: var(--bold);
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote {
+    font-size: 3em;
+    display: flex;
+
+}
+
+.quote span {
+    margin-right: 15px;
+}
+
+.quote span:nth-child(5) {
+    margin-right: 0 !important;
+}
+
+.author {
+    font-size: 3em;
+}
+
+.author span {
+    color: var(--ascent);
+}
+
+.quote span:hover {
+    transition: .3s;
+    transform: translateY(-5px);
+
+}
+
+.quote span:nth-child(1):hover {
+    color: var(--blue);
+
+}
+
+
+
+.quote span:nth-child(2):hover {
+    color: var(--green);
+}
+
+.quote span:nth-child(3):hover {
+    color: var(--orange);
+}
+
+.quote span:nth-child(4):hover {
+    color: var(--purple);
+}
+
+.quote span:nth-child(5):hover {
+    color: var(--green);
+}
+
+@key-frame width-animation-level {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 19%;
+    }
+}
+
+@key-frame width-animation-code {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 30%;
+    }
+}
+
+@key-frame width-animation-social {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 10%;
+    }
+}
